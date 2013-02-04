@@ -15,22 +15,49 @@
     </head>
     <body>
         <script type="text/javascript"> 
-            function validateForm() {
+            function validateRectForm() {
                 valid = true;
                 var x = document.form1.rlegA.value;
                 var y = document.form1.rlegB.value;
                 if (x == null || x == "") {
                     alert("You must enter a length for leg A");
                     valid = false;
+                } else if (y == null || y == "") {
+                    alert("You must enter a length for leg B");
+                    valid = false;
                 }
                 return valid;
             }
+            
+            function validateCircForm() {
+                valid = true;
+                var r = document.form1.radius.value;
+                
+                if (r == null || r == "") {
+                    alert("You must enter a radius");
+                    valid = false;
+                return valid;
+            }
+            function validateTriForm() {
+                valid = true;
+                var x = document.form1.tLegA.value;
+                var y = document.form1.tLegB.value;
+                if (x == null || x == "") {
+                    alert("You must enter a length for leg A");
+                    valid = false;
+                } else if (y == null || y == "") {
+                    alert("You must enter a length for leg B");
+                    valid = false;
+                }
+                return valid;
+            }
+            
         </script>
 
         <h1><strong>Calculate the Area of a Rectangle</strong></h1>
 
         <form id="form1" name="form1" method="POST" action="RectController.do" 
-              onsubmit="return validateForm();" >
+              onsubmit="return validateRectForm();" >
             <img src="/Images/rectangle.jpg" alt="Rectangle" style="float:right" width="140" height="70">
             Enter the length of "A": <input type="text" name="rlegA"><br>
             Enter the length of "B": <input type="text" name="rlegB"><br>
@@ -40,7 +67,8 @@
 
         <h1><strong>Calculate the Area of a Circle</strong></h1>
 
-        <form id="form2" name="form2" method="POST" action="CircController.do">
+        <form id="form2" name="form2" method="POST" action="CircController.do"
+              onsubmit="return validateCircForm();" >
             <img src="/Images/circle.bmp" alt="Circle" style="float:right" width="140" height="70">
             Enter the length of the radius: <input type="text" name="radius">
             <br>
@@ -50,7 +78,8 @@
 
         <h1><strong>Calculate the Length of leg of a Triangle</strong></h1>
 
-        <form id="form3" name="form3" method="POST" action="TriController.do">
+        <form id="form3" name="form3" method="POST" action="TriController.do"
+              onsubmit="return validatTriForm();" >
             <img src="/Images/right_triangle.bmp" alt="Triangle" style="float:right" width="140" height="70">
             Enter the length of "A": <input type="text" name="tLegA"><br>
             Enter the length of "B": <input type="text" name="tLegB">

@@ -13,12 +13,20 @@
         <title>Calculation</title>
     </head>
     <body>
-        <h1>Area of Rectangle</h1>
+        <h1>Calculation Answer</h1>
         <p>
-            <% String rArea = (String)request.getAttribute("rArea");
-            out.print("The area of the rectangle is: " + rArea);
+            <% String rArea = (String) request.getAttribute("rArea");
+                String cArea = (String) request.getAttribute("cArea");
+                String tLegC = (String) request.getAttribute("tLegC");
+
+                if (rArea != null)
+                    out.print("The area of the rectangle is: " + rArea);
+                else if (cArea != null) 
+                    out.print("The area of the circle is: " + cArea);
+                else 
+                    out.print("The leg of the triangle is: " + tLegC);
             %>
         </p>
-        
+
     </body>
 </html>
