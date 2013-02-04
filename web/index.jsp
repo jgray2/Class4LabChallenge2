@@ -16,11 +16,14 @@
     <body>
         <script type="text/javascript"> 
             function validateForm() {
-                var x = document.forms["form1"]["form1"].value;
+                valid = true;
+                var x = document.form1.rlegA.value;
+                var y = document.form1.rlegB.value;
                 if (x == null || x == "") {
                     alert("You must enter a length for leg A");
-                    return false;
+                    valid = false;
                 }
+                return valid;
             }
         </script>
 
