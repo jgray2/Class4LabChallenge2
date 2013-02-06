@@ -16,10 +16,10 @@
                 valid = true;
                 var x = document.forms["form1"]["rlegA"].value;
                 var y = document.form1.rlegB.value;
-                if (x == null || x == "") {
+                if (x == null || x == "" || isNaN(x)) {
                     alert("You must enter a length for leg A");
                     valid = false;
-                } else if (y == null || y == "") {
+                } else if (y == null || y == ""|| isNaN(y)) {
                     alert("You must enter a length for leg B");
                     valid = false;
                 }
@@ -30,7 +30,7 @@
                 valid = true;
                 var r = document.forms["form2"]["radius"].value;
                 
-                if (r == null || r == "") {
+                if (r == null || r == '' || isNan(r)) {
                     alert("You must enter a radius");
                     valid = false;
                     return valid;
@@ -39,10 +39,10 @@
                     valid = true;
                     var x = document.forms["form3"]["tLegA"].value;
                     var y = document.forms["form3"]["tLegB"].value;
-                    if (x == null || x == "") {
+                    if (x == null || x == '' || isNan(x)) {
                         alert("You must enter a length for leg A");
                         valid = false;
-                    } else if (y == null || y == "") {
+                    } else if (y == null || y == '' || isNan(y)) {
                         alert("You must enter a length for leg B");
                         valid = false;
                     }
