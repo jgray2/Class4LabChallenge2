@@ -17,7 +17,7 @@ import model.Rectangle;
 @WebServlet(name = "CalcRectForwardController", urlPatterns = {"/RectController.do"})
 public class CalcRectForwardController extends HttpServlet {
 
-    private static final String destination = "/result.jsp";
+    private static final String destination = "/index.jsp";
     
      /**
      * Processes requests for both HTTP

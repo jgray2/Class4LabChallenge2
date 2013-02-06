@@ -17,7 +17,7 @@ import model.Triangle;
 @WebServlet(name = "CalcTriForwardController", urlPatterns = {"/TriController.do"})
 public class CalcTriForwardController extends HttpServlet {
 
-    private static final String destination = "/result.jsp";
+    private static final String destination = "/index.jsp";
     
      /**
      * Processes requests for both HTTP

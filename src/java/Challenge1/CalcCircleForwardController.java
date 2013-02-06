@@ -17,7 +17,7 @@ import model.Circle;
 @WebServlet(name = "CalcCircleForwardController", urlPatterns = {"/CircController.do"})
 public class CalcCircleForwardController extends HttpServlet {
 
-    private static final String destination = "/result.jsp";
+    private static final String destination = "/index.jsp";
    
     /**
      * Processes requests for both HTTP
