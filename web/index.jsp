@@ -31,22 +31,23 @@
                 var r = document.forms["form2"]["radius"].value;
                 if (r == null || r == '' || isNaN(r)) {
                     alert("You must enter a radius");
+                    valid = false; 
+                } return valid;
+            }
+                
+            function validateTriForm() {
+                valid = true;
+                var x = document.forms["form3"]["tLegA"].value;
+                var y = document.forms["form3"]["tLegB"].value;
+                if (x == null || x == '' || isNaN(x)) {
+                    alert("You must enter a length for leg A");
                     valid = false;
-                    return valid;
+                } else if (y == null || y == '' || isNan(y)) {
+                    alert("You must enter a length for leg B");
+                    valid = false;
                 }
-                function validateTriForm() {
-                    valid = true;
-                    var x = document.forms["form3"]["tLegA"].value;
-                    var y = document.forms["form3"]["tLegB"].value;
-                    if (x == null || x == '' || isNaN(x)) {
-                        alert("You must enter a length for leg A");
-                        valid = false;
-                    } else if (y == null || y == '' || isNan(y)) {
-                        alert("You must enter a length for leg B");
-                        valid = false;
-                    }
-                    return valid;
-                }     
+                return valid;
+            }     
         </script>
     </head>
     <body>
